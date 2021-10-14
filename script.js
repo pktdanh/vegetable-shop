@@ -28,7 +28,6 @@ document.querySelector('#login-btn').onclick = () => {
   navbar.classList.remove('active');
   loginForm.classList.contains('active')?header.classList.remove('hidden'):header.classList.add('hidden');
 
-
 }
 
 let navbar = document.querySelector('.navbar');
