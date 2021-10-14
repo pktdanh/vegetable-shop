@@ -1,10 +1,11 @@
+let header = document.querySelector('.header')
 let searchForm = document.querySelector('.search-form');
-
 document.querySelector('#search-btn').onclick = () => {
   searchForm.classList.toggle('active');
   shoppingCart.classList.remove('active');
   loginForm.classList.remove('active');
   navbar.classList.remove('active');
+  searchForm.classList.contains('active')?header.classList.remove('hidden'):header.classList.add('hidden');
 }
 
 let shoppingCart = document.querySelector('.shopping-cart');
@@ -14,6 +15,8 @@ document.querySelector('#cart-btn').onclick = () => {
   searchForm.classList.remove('active');
   loginForm.classList.remove('active');
   navbar.classList.remove('active');
+  shoppingCart.classList.contains('active')?header.classList.remove('hidden'):header.classList.add('hidden');
+
 }
 
 let loginForm = document.querySelector('.login-form');
@@ -23,6 +26,9 @@ document.querySelector('#login-btn').onclick = () => {
   searchForm.classList.remove('active');
   shoppingCart.classList.remove('active');
   navbar.classList.remove('active');
+  loginForm.classList.contains('active')?header.classList.remove('hidden'):header.classList.add('hidden');
+
+
 }
 
 let navbar = document.querySelector('.navbar');
@@ -32,6 +38,7 @@ document.querySelector('#menu-btn').onclick = () => {
   searchForm.classList.remove('active');
   shoppingCart.classList.remove('active');
   loginForm.classList.remove('active');
+  navbar.classList.contains('active')?header.classList.remove('hidden'):header.classList.add('hidden');
 }
 
 window.onscroll = () => {
